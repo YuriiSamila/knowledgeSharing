@@ -29,12 +29,11 @@ public class DataStreams {
                 System.out.println(d + "; " + i + "; " + s);
             }
         } catch (EOFException e) {
-            //Notice that DataStreams detects an end-of-file condition by catching EOFException,
+            // Notice that DataStreams detects an end-of-file condition by catching EOFException,
             // instead of testing for an invalid return value.
             // All implementations of DataInput methods use EOFException instead of return values.
             e.printStackTrace();
         }
-
 
     }
 
