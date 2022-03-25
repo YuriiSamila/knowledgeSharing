@@ -1,4 +1,4 @@
-package main.io.objectstreams;
+package main.ionio.io.objectstreams;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

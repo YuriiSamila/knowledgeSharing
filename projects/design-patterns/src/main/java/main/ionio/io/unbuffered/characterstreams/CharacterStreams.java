@@ -1,4 +1,4 @@
-package main.io.unbuffered.characterstreams;
+package main.ionio.io.unbuffered.characterstreams;
 
 import java.io.FileReader;
 import java.io.FileWriter;
