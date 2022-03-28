@@ -53,7 +53,7 @@ public class FileBasics {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
+         // Files attributes
 //        try {
 //            BasicFileAttributes basicFileAttributes = Files.readAttributes(path, BasicFileAttributes.class);
 //            System.out.println("Creation time: " + basicFileAttributes.creationTime());
@@ -64,12 +64,11 @@ public class FileBasics {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
+          // Memory space
 //        try {
 //            FileStore fileStore = Files.getFileStore(path);
 //            System.out.println(fileStore.getTotalSpace());
 //            System.out.println(fileStore.getUsableSpace());
-//
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
