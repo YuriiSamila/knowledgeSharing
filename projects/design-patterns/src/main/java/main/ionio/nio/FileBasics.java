@@ -34,7 +34,8 @@ public class FileBasics {
 
         //copying
 //        try {
-//            Files.copy(path, Paths.get("/newPath"), REPLACE_EXISTING);
+//            Path pathTest = Paths.get("C:\\BackUp\\knowledgeSharing\\testCopyFile.txt");
+//            Files.copy(pathTest, Paths.get("C:\\BackUp\\knowledgeSharing\\anotherFolder")); // REPLACE_EXISTING
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
@@ -46,27 +47,30 @@ public class FileBasics {
 //            e.printStackTrace();
 //        }
 
+        Path path2 = Paths.get("C:\\BackUp\\knowledgeSharing");
         //Metadata
 //        try {
-//            Map<String, Object> size = Files.readAttributes(path, "size");
+//            Map<String, Object> size = Files.readAttributes(path2, "size");
 //            System.out.println(size);
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
+
          // Files attributes
 //        try {
-//            BasicFileAttributes basicFileAttributes = Files.readAttributes(path, BasicFileAttributes.class);
+//            BasicFileAttributes basicFileAttributes = Files.readAttributes(path2, BasicFileAttributes.class);
 //            System.out.println("Creation time: " + basicFileAttributes.creationTime());
 //            System.out.println("Is directory: " + basicFileAttributes.isDirectory());
-//            DosFileAttributes dosFileAttributes = Files.readAttributes(path, DosFileAttributes.class);
+//            DosFileAttributes dosFileAttributes = Files.readAttributes(path2, DosFileAttributes.class);
 //            System.out.println("isReadOnly: " + dosFileAttributes.isReadOnly());
 //            System.out.println("isHidden: " + dosFileAttributes.isHidden());
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
+
           // Memory space
 //        try {
-//            FileStore fileStore = Files.getFileStore(path);
+//            FileStore fileStore = Files.getFileStore(path2);
 //            System.out.println(fileStore.getTotalSpace());
 //            System.out.println(fileStore.getUsableSpace());
 //        } catch (IOException e) {

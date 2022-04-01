@@ -15,18 +15,21 @@ public class DataStreams {
             for (int i = 0; i < doubles.length; i++) {
                 outputStream.writeDouble(doubles[i]);
                 outputStream.writeInt(ints[i]);
-                outputStream.writeUTF(strings[i]);
+                outputStream.writeUTF(strings[i]); // The writeUTF method writes out String values in a modified form of UTF-8.
+                // This is a variable-width character encoding that only needs a single byte for common Western characters
             }
         }
         double d;
         int i;
         String s;
         try (DataInputStream inputStream = new DataInputStream(new BufferedInputStream(new FileInputStream(DATA_FILE)))) {
-            while (true) {
+            int index = 0;
+            while (index < 3) {
                 d = inputStream.readDouble();
                 i = inputStream.readInt();
                 s = inputStream.readUTF();
                 System.out.println(d + "; " + i + "; " + s);
+                index++;
             }
         } catch (EOFException e) {
             // Notice that DataStreams detects an end-of-file condition by catching EOFException,

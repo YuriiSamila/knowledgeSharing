@@ -11,17 +11,22 @@ public class BufferedReaderWriter {
 //    Buffered input streams read data from a memory area known as a buffer; the native input API is called only when the buffer is empty.
 //    Similarly, buffered output streams write data to a buffer, and the native output API is called only when the buffer is full.
 
+//    private static void flushExample() throws IOException {
+//        PrintWriter printWriter = new PrintWriter(new FileWriter("test.txt"), true);
+//        System.out.println(printWriter.checkError());
+//    }
+
     public static void main(String[] args) {
-    write();
-    read();
+        write();
+        read();
     }
 
     private static void write() {
         String[] names = {"Oleh", "Vasyl", "Marta"};
         try (BufferedWriter writer = new BufferedWriter(
-                new FileWriter("output.txt"))) {
+                new FileWriter("bufferedWriter.txt"))) {
             for (String name : names) {
-                writer.write("\n" + name);
+                writer.write(name + "\n");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -29,12 +34,12 @@ public class BufferedReaderWriter {
     }
 
     private static void read() {
-        try (BufferedReader reader = new BufferedReader(new FileReader("output.txt"))){
-             String line;
-             while ((line = reader.readLine()) != null) {
-                 System.out.println(line);
-             }
-        }catch (IOException e) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("bufferedWriter.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

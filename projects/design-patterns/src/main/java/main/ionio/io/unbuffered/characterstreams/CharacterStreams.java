@@ -1,15 +1,13 @@
 package main.ionio.io.unbuffered.characterstreams;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class CharacterStreams {
 
     public static void main(String[] args) {
 
-        try (FileReader reader = new FileReader("testText.txt");
-             FileWriter writer = new FileWriter("copiedText.txt")) {
+        try (FileReader reader = new FileReader("charStreamRead.txt");
+             FileWriter writer = new FileWriter("charStreamWrite.txt")) {
             int c;
             while ((c = reader.read()) != -1) {
                 writer.write(c);
@@ -17,6 +15,16 @@ public class CharacterStreams {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+//        try (BufferedReader reader = new BufferedReader(new FileReader("charStreamRead.txt"));
+//             PrintWriter outputStream = new PrintWriter(new FileWriter("charStreamWrite.txt"))) {
+//            String c;
+//            while ((c = reader.readLine()) != null) {
+//                outputStream.println(c);
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
 

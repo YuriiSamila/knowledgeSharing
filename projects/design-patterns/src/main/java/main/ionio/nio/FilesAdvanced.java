@@ -28,8 +28,9 @@ public class FilesAdvanced {
 //        }
 
         // Buffered I/O Methods for Text Files
+//        Path fileWriteCustomString = Paths.get("C:\\BackUp\\knowledgeSharing\\tempFileWriteCustomString.txt");
 //        try (BufferedReader reader = Files.newBufferedReader(fileRead);
-//             BufferedWriter writer = Files.newBufferedWriter(fileWrite)) {
+//             BufferedWriter writer = Files.newBufferedWriter(fileWriteCustomString)) {
 //            String line;
 //            while ((line = reader.readLine()) != null) {
 //                System.out.println(line);
@@ -41,8 +42,9 @@ public class FilesAdvanced {
 //        }
 
         // Methods for Unbuffered Streams and Interoperable with java.io APIs
+//        Path fileWriteIO = Paths.get("C:\\BackUp\\knowledgeSharing\\tempFileWriteIO.txt");
 //        try (InputStream inputStream = Files.newInputStream(fileRead);
-//        OutputStream outputStream = Files.newOutputStream(fileWrite)){
+//        OutputStream outputStream = Files.newOutputStream(fileWriteIO)){
 //            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 //            String line;
 //            while ((line = reader.readLine()) != null) {

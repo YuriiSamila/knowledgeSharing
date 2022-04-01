@@ -27,12 +27,9 @@ public class RandomAccessFileTest {
            } while (nRead != -1 && copy.hasRemaining());
             // Write "What is the best?"
             fc.write(out);
-            while (out.hasRemaining()) {
-                fc.write(out);
-                out.rewind();
-            }
+
             // Move to the end of the file.  Copy the first 17 bytes to
-            // the end of the file.  Then write "What is the best?" again.
+            // the end of the file.
             long length = fc.size();
             fc.position(length - 1);
             copy.flip();
