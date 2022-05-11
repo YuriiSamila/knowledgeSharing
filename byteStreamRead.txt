@@ -1,0 +1,7 @@
+This
+text
+has
+been
+copied
+by
+bytes stream
