@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <title>
+        This is TEST title
+    </title>
+    <property>
+        This is TEST property
+    </property>
+    <Price>
+        5888
+    </Price>
+</item>
